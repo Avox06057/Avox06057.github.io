@@ -40,10 +40,15 @@ body::-webkit-scrollbar {
     border: none;
     font-size: 30px;
 	margin: auto;
-    margin-top: 3vh;
+	height: 50px;
 	cursor: pointer;
 	transition: all 1s;
 	display: block;	
+	position: absolute;
+	left:0;
+	right: 0;
+	z-index: 1000;
+
 }
 .closeButton:hover {
 	color: var(--color-bg);
@@ -53,9 +58,9 @@ body::-webkit-scrollbar {
 .main_title_con {
     width: 100vw;
     height: 100vh;
-	padding-bottom: 20vh;
     display: flex;
 	align-items:center;
+	padding-bottom: 200px;
 }
 .main_title {
     font-size: 18vw;    
@@ -69,7 +74,7 @@ body::-webkit-scrollbar {
 	margin: auto;
 	left: 0;
 	right: 0;
-	margin-top: 2em;
+	margin-top: 12vw;
 }
 .main_navbar {
   position: absolute;
@@ -330,16 +335,35 @@ body::-webkit-scrollbar {
 		font-size: 125px;
 	}
 }
-
-.data {
-	text-align: center;
-	color: black;
-	font-size: 18vw;
-	margin-top: 100px;
+.dataStoryIntro {
+	display: flex;
+	position:absolute;
+	width: 100vw;
+	height: 100vh;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	font-family: bennet-banner, serif;
 }
 .dataTitle {
-	display: block;
-	color: red;
+	line-height: 1;
+	font-size: 12vw;
+	font-weight: 300;
+	text-transform:uppercase;
+}
+.dataName {
 	font-size: 6vw;
+	position: absolute;
+	margin-top: 20vw;
+}
+.dataContent {
+	display: flex;
+	color: black;
+	font-size: 6vw;
+	width: 100vw;
+	height: 100vh;
+	padding-top: 100vh;
 	text-align: center;
+	justify-content: center;
+	align-items: center;
 }
