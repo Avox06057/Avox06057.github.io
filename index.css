@@ -10,6 +10,8 @@ body {
 	transition: all 2s;
 	cursor: default;
 	overflow-y:scroll;
+	--navbar-position: fixed;
+
 }
 
 
@@ -171,13 +173,15 @@ body::-webkit-scrollbar {
   justify-content:space-evenly;
   z-index: 2;
   font-size: 15px;
+  opacity: 1;
+  transition: all 1s;
 }
 .story_navbar span {
 	font-size: 20px;
 	margin-top: -2.5px;
 }
 	/*Story Section*/
-#storyTop {
+#storyView {
 	display: block;
 	width: 100%;
 	height: 0;
@@ -337,7 +341,6 @@ body::-webkit-scrollbar {
 }
 .dataStoryIntro {
 	display: flex;
-	position:absolute;
 	width: 100vw;
 	height: 100vh;
 	justify-content: center;
@@ -357,13 +360,21 @@ body::-webkit-scrollbar {
 	margin-top: 20vw;
 }
 .dataContent {
-	display: flex;
 	color: black;
 	font-size: 6vw;
-	width: 100vw;
-	height: 100vh;
-	padding-top: 100vh;
-	text-align: center;
-	justify-content: center;
+	width: 90vw;
+	margin-left: 8vw;
+	height: 100%;
+	justify-content: start;
 	align-items: center;
+
+}
+@media screen and (min-width: 1000px) {
+	.dataName {
+		margin-top: 200px;
+	}
+	.dataContent {
+		font-size: 50px;
+		margin: auto;
+	}
 }
