@@ -1,23 +1,22 @@
+const body = document.getElementById("body")
+const myData = document.getElementById('myData')
 const story = document.getElementById('storyTop');
 const storyTitle = document.getElementById('storyTitle')
 const storyName = document.getElementById('storyName')
 const storyCon = document.getElementById('storyContent')
-const myData = document.getElementById('myData')
-const body = document.getElementById("body")
 
 function openStory(id) {
 	story.style.height= '100%';
 	body.style.overflow = 'hidden';
-	getData(id, storyTitle, storyCon)
+	getData(id)
 }
 	
 function closeStory() {
 	story.style.height= '0';
-	myData.innerHTML = '';
 	body.style.overflow = 'visible';
 }
 
-function getData(id, storyTitle, storyCon) {
+function getData(id) {
 	fetch('../data/data.json')
 		.then(function (response) {
 			return response.json();
@@ -34,12 +33,11 @@ function getData(id, storyTitle, storyCon) {
 		for (var i = id; i < (id+1); i++) {
 			let ts = [
 				storyTitle.classList.add('dataTitle'),
-				storyTitle.innerHTML = "Title: " + data[i].title,
+				storyTitle.innerHTML = data[i].title,
 				storyName.classList.add('dataName'),
-				storyName.innerHTML = "Name: " + data[i].name,
+				storyName.innerHTML = data[i].name,
 				storyCon.classList.add('dataContent'),
-				storyCon.innerHTML = "Content: " + data[i].content,
-				
+				storyCon.innerHTML = data[i].content,
 			]
 				
 			mainContainer.appendChild(ts);
