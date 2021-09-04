@@ -334,13 +334,12 @@ body::-webkit-scrollbar {
 .data {
 	text-align: center;
 	color: black;
-	font-size: 20px;
+	font-size: 18vw;
 	margin-top: 100px;
 }
 .dataTitle {
 	display: block;
 	color: red;
-	text-transform: uppercase;
-	font-size: 40px;
+	font-size: 6vw;
 	text-align: center;
 }
