@@ -1,12 +1,12 @@
 const story = document.getElementById('storyTop');
-const storyCon = document.getElementById('storyCon')
+const storyCon = document.getElementById('storyContent')
 const myData = document.getElementById('myData')
 const body = document.getElementById("body")
 
 function openStory(id) {
 	story.style.height= '100%';
 	body.style.overflow = 'hidden';
-	getData(id, story)
+	getData(id, story, storyCon)
 }
 	
 function closeStory() {
@@ -15,7 +15,7 @@ function closeStory() {
 	body.style.overflow = 'visible';
 }
 
-function getData(id, story) {
+function getData(id, story, storyCon) {
 	fetch('../data/data.json')
 		.then(function (response) {
 			return response.json();
@@ -31,8 +31,12 @@ function getData(id, story) {
 		for (var i = id; i < (id+1); i++) {
 			var name = data[i].name;
 			let ts = [
-			story.classList.add('data'),
-			story.innerHTML = "Title: " + name + data[i].title]
+				story.classList.add('data'),
+				storyCon.classList.add('dataTitle'),
+				story.innerHTML = "Title: " + name + data[i].title,
+				storyCon.innerHTML = "Testing: " + data[i].content,
+			]
+				
 			mainContainer.appendChild(ts);
 		}
 	}
