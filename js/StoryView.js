@@ -6,18 +6,27 @@ const storyName = document.getElementById('storyName')
 const storyCon = document.getElementById('storyContent')
 const storyView = document.getElementById('storyView')
 const navbar = document.getElementById('story_navbar')
+const navbarScroll_1 = document.getElementById('navbarScroll_1')
+const navbarScroll_2 = document.getElementById('navbarScroll_2')
 
 function openStory(id) {
 	story.style.height= '100%';
 	body.style.overflow = 'hidden';
+	navbarScroll_1.style.pointerEvents = 'none'
+	navbarScroll_2.style.pointerEvents = 'none'
+	navbarScroll_1.style.opacity = 0
+	navbarScroll_2.style.opacity = 0
+
 	getData(id)
 }
 	
 function closeStory() {
 	story.style.height= '0';
 	body.style.overflow = 'visible';
-
-
+	navbarScroll_1.style.pointerEvents = 'auto'
+	navbarScroll_2.style.pointerEvents = 'auto'
+	navbarScroll_1.style.opacity = 1
+	navbarScroll_2.style.opacity = 1
 }
 
 function scrollHide() {
@@ -26,9 +35,11 @@ function scrollHide() {
 		 navbar.style.opacity = 0;
 	 }
 	 else {
-		 navbar.style.opacity = 1
+		 navbar.style.opacity = 1;
 	 }
 }
+
+
 function getData(id) {
 	fetch('../data/data.json')
 		.then(function (response) {
