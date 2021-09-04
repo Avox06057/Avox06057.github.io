@@ -1,9 +1,11 @@
 const body = document.getElementById("body")
 const myData = document.getElementById('myData')
-const story = document.getElementById('storyTop');
+const story = document.getElementById('storyView');
 const storyTitle = document.getElementById('storyTitle')
 const storyName = document.getElementById('storyName')
 const storyCon = document.getElementById('storyContent')
+const storyView = document.getElementById('storyView')
+const navbar = document.getElementById('story_navbar')
 
 function openStory(id) {
 	story.style.height= '100%';
@@ -14,8 +16,19 @@ function openStory(id) {
 function closeStory() {
 	story.style.height= '0';
 	body.style.overflow = 'visible';
+
+
 }
 
+function scrollHide() {
+	 var scroll = storyView.scrollTop;
+	 if (scroll > 170) {
+		 navbar.style.opacity = 0;
+	 }
+	 else {
+		 navbar.style.opacity = 1
+	 }
+}
 function getData(id) {
 	fetch('../data/data.json')
 		.then(function (response) {
