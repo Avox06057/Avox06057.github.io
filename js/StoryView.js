@@ -30,9 +30,9 @@ function getData(id, story) {
 		var mainContainer = document.getElementById('myData')
 		for (var i = id; i < (id+1); i++) {
 			var name = data[i].name;
-			var ts = [
+			let ts = [
 			story.classList.add('data'),
-			story.innerHTML = "name" + name+ data[i].title]
+			story.innerHTML = "Title: " + name + data[i].title]
 			mainContainer.appendChild(ts);
 		}
 	}
