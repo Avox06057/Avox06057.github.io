@@ -10,10 +10,19 @@ body {
 	transition: all 2s;
 	cursor: default;
 	overflow-y:scroll;
-	--navbar-position: fixed;
 
+	animation: fadeInAnimation ease 3s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+} 
+@keyframes fadeInAnimation {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+     }
 }
-
 
 body::-webkit-scrollbar {
 	display: none;
