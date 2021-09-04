@@ -1,3 +1,7 @@
+$(document).ready(function(){
+	$(this).scrollTop(0);
+});
+
 $(function() {
     $('a[href*="#"]').on('click', function(e) {
         e.preventDefault();
