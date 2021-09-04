@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+	<head>
+		<title>Avoxium</title>
+		<meta name="Avoxium", content="Collection of stories">
+		<meta charset="UTF-8">
+		<meta name="viewport", content="width=device-width, initial-scale=1.0">
+		<link rel="stylesheet" href="https://use.typekit.net/mmi7prs.css">
+		<link rel="stylesheet" type="text/css" href="./index.css" />
+		<script src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js"></script>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	</head>
+
+	<body class="body colorChange">
+<!--Contact Form-->
+		<div id='contactForm'>
+			<button class='closeButton' onclick='closeContactForm()'>&times;</button>
+			<div class='contactContainer'>
+				<p class='contactTitle'>Get In Touch</p>
+				<div class='contactForm'>
+					<form id='contact-form'>
+						<input type='hidden' name='contact_number'>
+						<input required class='contactInput' type='text' name='sender_name' placeholder="Name">
+						<input required class='contactInput' type='email' name='sender_email' placeholder="Email">
+						<textarea required class='contactMessage' name='message' placeholder="message"></textarea>
+						<input id='contactSubmit' class='contactSend' type='submit' value='Send'>
+					</form>
+				</div>
+			</div>
+		</div>
+		
+		<div id='top'> 
+<!--Navbar-->
+			<div class='main_navbar'>
+				<a href='./index2.html'>Story</a>
+				<a  onclick='colorChange()'>Reverse</a>
+				<a href='#aboutPage'>About</a>
+				<a onclick='openContactForm()'>Contact</a>
+			</div>
+<!--Title Section-->
+			<main class='main_title_con'>
+				<p class='main_title'>Avoxium</p>
+				<p class='main_subtitle'>A - Without &nbsp; & &nbsp; Vox - Voice</p>
+			</main>
+			
+<!--About Section-->
+			<section id='aboutPage'>
+				<div class="content content__aboutImg">
+					<img  class="content__img content__tinyImg" src="img/Main/img_1.jpg" alt="bgImage__1"/>
+					<img  class="content__img content__tinyImg" src="img/Main/img_2.jpg" alt="bgImage__2"/>
+					<img  class="content__img content__tinyImg" src="img/Main/img_3.jpg" alt="bgImage__3"/>
+					<img  class="content__img content__tinyImg" src="img/Main/img_4.jpg" alt="bgImage__4"/>
+					<img  class="content__img content__tinyImg" src="img/Main/img_5.jpg" alt="bgImage__5"/>
+					<img  class="content__img content__tinyImg" src="img/Main/img_6.jpg" alt="bgImage__6"/>
+					<img  class="content__img content__tinyImg" src="img/Main/img_7.jpg" alt="bgImage__7"/>
+					<img  class="content__img content__tinyImg" src="img/Main/img_8.jpg" alt="bgImage__8"/>
+					<img  class="content__img content__tinyImg" src="img/Main/img_9.jpg" alt="bgImage__9"/>
+					<img  class="content__img content__tinyImg" src="img/Main/img_10.jpg" alt="bgImage__10"/>
+				</div>
+				<button id='closeBtn' style='opacity: 0; z-index: 1000; position: absolute; float: right; right: 0; font-size: 100px' onclick='closeDev()'>X</button>
+
+				<nav class="content__aboutWord">
+					
+					<a class="aboutWord"><b>F</b>allacy</a>
+					<a class="aboutWord"><b>A</b>nomaly</a>
+					<a class="aboutWord"><b>I</b>nfirmity</a>
+					<a class="aboutWord"><b>T</b>imidity</a>
+					<a class="aboutWord"><b>H</b>egemony</a>
+					
+
+				</nav>
+			</section>
+		</div>
+
+<!--Imported Files-->
+	<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/emailjs-com@2/dist/email.min.js"></script>
+		<script src='./js/EmailForm.js'></script>
+		<script src='./js/Scroll.js'></script>
+		<script src='./js/ContactForm.js'></script>
+		<script src='./js/ColorChange.js'></script>
+	</body>
